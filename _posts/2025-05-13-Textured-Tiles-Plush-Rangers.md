@@ -213,9 +213,9 @@ If you download and run the sample code you should see this:
 
 ![image.png](/assets/img/posts/20250514/blendedterrainexample.png)
 
-You can mess with the texture, the tiles and see how they interact with each other. I think this is a great technique for giving tiles an organic feel without the burden of tons of tiles. You can also use similar tiles and texture them to give different appearances. Like different kinds of wooden floors. 
+You can mess with the texture, the tiles and see how they interact with each other. I think this is a great technique for giving tiles an organic feel without the burden of tons of tiles. You can use similar tiles and texture them to give different appearances, such as different kinds of wooden floors. 
 
-In Plush Rangers we layer several tiles together to give more customization. We also place a lot of objects on top to break the eye from the tile underneath. This technique also works well with our perspective camera.
+In Plush Rangers we layer several tiles on top of each other to give more customization. We also place objects on top to break the eye from the tile underneath. 
 
 ### About the game
 
