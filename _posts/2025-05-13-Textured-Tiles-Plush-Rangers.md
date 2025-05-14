@@ -1,9 +1,9 @@
 ---
-title: Textured Tiles
+title: How to use a Shader to Add Textures to your Tiles in Gamemaker 
 date: 2025-05-13 16:00
 categories: [Plush Rangers, Devlog]
 tags: [gamedev, gamemaker, shaders]     # TAG names should always be lowercase
-description: How to use a simple shader to create textured tilesets in Gamemaker
+description: This is a simple technique that can add a lot of extra detail to your game with not much effort.
 ---
 **Sample Project Here!**
 [Github](https://github.com/tredfern/BlendedTerrain) | [YYZ](https://github.com/tredfern/BlendedTerrain/releases/download/20250513/BlendedTerrain.yyz)
@@ -214,7 +214,7 @@ If you download and run the sample code you should see this:
 
 I think this is a great and simple technique for giving tiles an organic feel without the burden of tons of tiles. You can use similar tiles and texture them to give different appearances, such as different kinds of wooden floors. There are a lot of applications for this technique depending on the kind of game you are making. 
 
-### About Plush Rangers
+### About Plush
 
 ![Plush Ranger Capsule](/assets/img/prCapsule1.png)
 
