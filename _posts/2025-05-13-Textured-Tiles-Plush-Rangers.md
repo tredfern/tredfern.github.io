@@ -9,7 +9,6 @@ description: This is a simple technique that can add a lot of extra detail to yo
 [Github](https://github.com/tredfern/BlendedTerrain) | [YYZ](https://github.com/tredfern/BlendedTerrain/releases/download/20250513/BlendedTerrain.yyz)
 
 ### Overview
-
 For Plush Rangers, we wanted our ground to have a hand-drawn feel while allowing quick level and map creation—with the potential for procedural generation later.
 
 GameMaker excels at tile handling, so we explored that approach first. However, when we added tile variations, the result looked too gridded. Here's an early prototype of the ground.
