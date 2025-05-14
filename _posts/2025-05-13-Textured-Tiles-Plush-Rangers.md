@@ -152,15 +152,13 @@ void main()
 
 The fragment shader uses a simple algorithm to figure out the proper color to use:
 
-1. It figures out which coordinate to pull from the texture sprite. This is based on the world position assuming a 1 to 1 relationship between sprite pixel size and world coordinates. 
-    1. For example if our texture is 1024x1024
-    2. At world position 100, 20 we would want the texture coordinates for 100, 20
-    3. At world position 1025, 2090 we would want the texture coordinates for 1, 42
-2. Because texture coordinates are a value between 0 and 1 we divide by our texture size to get our normalized coordinates.
-3. We adjust based on the texture page information we passed in. (You can simplify this step by setting your textures to live on their own texture page, but I try to let GM handle the image data as much as it can)
-4. We get the color based from the tileset (`baseColor`)
-5. We get the color from the the texture (`textureColor`)
-6. We combine them together to get our final color. This allows the tiles to have some edge to them that we can see or adjust. We could have different shapes, or if we had water we might have animated tiles that change that would allow more variation. We also use the `alpha` value from the base color to figure out what areas should not be drawn.
+1. *Get the texture coordinates*  
+    This is based on the world position assuming a 1 to 1 relationship between sprite pixel size and world coordinates. For example, with a 1024x1024 texture, and a tile at 1040, 500 -> we need the texture coordinate for 16, 500.
+
+    The texture coordinates are then normalized (0..1) and adjusted for the texture page. (You can simplify this step by setting your textures to live on their own texture page, but I try to let GM handle the image data as much as it can)
+2. We get the color based from the tileset (`baseColor`)
+3. We get the color from the the texture (`textureColor`)
+4. We combine them together to get our final color. This allows the tiles to have some edge to them that we can see or adjust. We could have different shapes, or if we had water we might have animated tiles that change that would allow more variation. We also use the `alpha` value from the base color to figure out what areas should not be drawn.
 
 ```glsl
 
@@ -207,17 +205,16 @@ void main()
 }
 ```
 
-## Finished
+## The Results 
 
 If you download and run the sample code you should see this:
 
 ![image.png](/assets/img/posts/20250514/blendedterrainexample.png)
 
-You can mess with the texture, the tiles and see how they interact with each other. I think this is a great technique for giving tiles an organic feel without the burden of tons of tiles. You can use similar tiles and texture them to give different appearances, such as different kinds of wooden floors. 
 
-In Plush Rangers we layer several tiles on top of each other to give more customization. We also place objects on top to break the eye from the tile underneath. 
+I think this is a great and simple technique for giving tiles an organic feel without the burden of tons of tiles. You can use similar tiles and texture them to give different appearances, such as different kinds of wooden floors. There are a lot of applications for this technique depending on the kind of game you are making. 
 
-### About the game
+### About Plush Rangers
 
 ![Plush Ranger Capsule](/assets/img/prCapsule1.png)
 
